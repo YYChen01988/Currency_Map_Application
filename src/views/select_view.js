@@ -11,7 +11,6 @@ SelectView.prototype.bindEvents = function(){
 
   this.select.addEventListener('change', (event) => {
     PubSub.publish("SelectView:currency_name-selected", event.target.value);
-
   });
 };
 
