@@ -26,6 +26,7 @@ CurrencyList.prototype.bindEvents = function(){
     });
     // console.log(selected_country)
     PubSub.publish("CurrencyList:country-ready", selected_country)
+
   })
 }
 
@@ -47,6 +48,7 @@ CurrencyList.prototype.getCurrencies = function(){
   uniq_names = new Set(uniq_names.sort())
   PubSub.publish("CurrencyList:names-ready", uniq_names);
   });
+
 };
 
 module.exports = CurrencyList;

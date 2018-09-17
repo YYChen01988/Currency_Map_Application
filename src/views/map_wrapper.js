@@ -22,7 +22,7 @@ MapWrapper.prototype.bindEvents = function(){
     const countries = event.detail;
     countries.forEach((country) => {
       var coordinates = country.latlng;
-      console.log(coordinates);
+      // console.log(coordinates);
       this.map.setView(coordinates,5);
       var m = L.marker(coordinates);
       this.markers.push(m);

@@ -2,6 +2,8 @@ const CurrencyList = require('./models/currency_list.js');
 const SelectView = require('./views/select_view.js');
 const CountryView = require('./views/country_view.js');
 const MapWrapper = require('./views/map_wrapper.js');
+const Chart = require('./views/chart.js');
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,5 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const currencyList = new CurrencyList();
   currencyList.getCurrencies();
   currencyList.bindEvents();
+
+  const chart = new Chart();
+  chart.bindEvents();
 
 });
